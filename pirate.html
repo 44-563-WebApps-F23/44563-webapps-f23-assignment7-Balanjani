@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Finding Treasure</title>
+    <style>
+        /* Add your CSS styling here */
+        #locations,
+        #penalty,
+        #help {
+            font-size: 16px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+        }
+
+        .game-field {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 5px;
+            width: 400px;
+        }
+
+        .location {
+            width: 80px;
+            height: 80px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <h1>Find the treasure by Balanjani</h1>
+
+    <p>Click on the locations to search for treasure, beware the traps</p>
+
+    <div id="locations">Number of locations checked is zero.</div>
+
+    <p>Click for help.</p>
+
+    <div id="help">Help report</div>
+
+
+    <div id="penalty">Penalty is zero.</div>
+
+    <div class="game-field">
+        <!-- Row 1 -->
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+
+        <!-- Row 2 -->
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+
+        <!-- Row 3 -->
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+
+        <!-- Row 4 -->
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+
+        <!-- Row 5 -->
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+        <div class="location" style="background-image: url('image_path.jpg');"></div>
+
+
+    </div>
+
+</body>
+
+</html>
