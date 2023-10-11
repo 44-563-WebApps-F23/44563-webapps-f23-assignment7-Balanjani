@@ -2,92 +2,155 @@
 <html>
 
 <head>
-    <title>Finding Treasure</title>
-    <style>
-        /* Add your CSS styling here */
-        #locations,
-        #penalty,
-        #help {
-            font-size: 16px;
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            background-color: #f0f0f0;
-        }
+  <title>Treasure Hunt Adventures</title>
+  <style>
+    #locations,
+    #penalty,
+    #help {
+      border: 3px outset rgb(60, 56, 60);
+      background-color: rgb(242, 171, 246);
+    }
 
-        .game-field {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 5px;
-            width: 400px;
-        }
+    .game-field {
+      display: grid;
+      grid-template-columns: repeat(5, 200px);
+      grid-template-rows: repeat(5, 200px);
+      gap: 5px;
+      /* Adjust the gap as needed */
+    }
 
-        .location {
-            width: 80px;
-            height: 80px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            border: 1px solid #ccc;
-        }
-    </style>
+    .location {
+      width: 90px;
+      height: 90px;
+      position: relative;
+    }
+
+    .location img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      /* Use 'contain' to ensure the entire image is visible */
+
+    }
+  </style>
+
 </head>
 
-
-
 <body>
-    <h1>Find the treasure by Balanjani</h1>
-
-    <p>Click on the locations to search for treasure, beware the traps</p>
-
-    <div id="locations">Number of locations checked is zero.</div>
-
-    <p>Click for help.</p>
-
-    <div id="help">Help report</div>
-
-
-    <div id="penalty">Penalty is zero.</div>
+  <h1>Find the treasure by Balanjani</h1>
+  <div>
+    <p>Click on the locations to search for treasure</p>
+  </div>
+  <div>
+    <p id="locations">Number of locations checked is zero</p>
+  </div>
+  <div>
+    <p id="penalty">Penalty is zero</p>
+  </div>
+  <div>
+    <p id="help">Click for help</p>
+  </div>
+  <div>
+    <p id="helpRep">Help report</p>
+  </div><br>
+  <div id="game-field">
 
     <div class="game-field">
-        <!-- Row 1 -->
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
+      <div class="location"><img id="location" src="starting_location.png" onclick="check(0)"></div>
+      <div class="location"><img id="location1" src="starting_location.png" onclick="check(1)"></div>
+      <div class="location"><img id="location2" src="starting_location.png" onclick="check(2)"></div>
+      <div class="location"><img id="location3" src="starting_location.png" onclick="check(3)"></div>
+      <div class="location"><img id="location4" src="starting_location.png" onclick="check(4)"></div>
 
-        <!-- Row 2 -->
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
+      <div class="location"><img id="location5" src="starting_location.png" onclick="check(5)"></div>
+      <div class="location"><img id="location6" src="starting_location.png" onclick="check(6)"></div>
+      <div class="location"><img id="location7" src="starting_location.png" onclick="check(7)"></div>
+      <div class="location"><img id="location8" src="starting_location.png" onclick="check(8)"></div>
+      <div class="location"><img id="location9" src="starting_location.png" onclick="check(9)"></div>
 
-        <!-- Row 3 -->
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
+      <div class="location"><img id="location10" src="starting_location.png" onclick="check(10)"></div>
+      <div class="location"><img id="location11" src="starting_location.png" onclick="check(11)"></div>
+      <div class="location"><img id="location12" src="starting_location.png" onclick="check(12)"></div>
+      <div class="location"><img id="location13" src="starting_location.png" onclick="check(13)"></div>
+      <div class="location"><img id="location14" src="starting_location.png" onclick="check(14)"></div>
 
-        <!-- Row 4 -->
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
+      <div class="location"><img id="location15" src="starting_location.png" onclick="check(15)"></div>
+      <div class="location"><img id="location16" src="starting_location.png" onclick="check(16)"></div>
+      <div class="location"><img id="location17" src="starting_location.png" onclick="check(17)"></div>
+      <div class="location"><img id="location18" src="starting_location.png" onclick="check(18)"></div>
+      <div class="location"><img id="location19" src="starting_location.png" onclick="check(19)"></div>
 
-        <!-- Row 5 -->
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-        <div class="location" style="background-image: url('image_path.jpg');"></div>
-
-
+      <div class="location"><img id="location20" src="starting_location.png" onclick="check(20)"></div>
+      <div class="location"><img id="location21" src="starting_location.png" onclick="check(21)"></div>
+      <div class="location"><img id="location22" src="starting_location.png" onclick="check(22)"></div>
+      <div class="location"><img id="location23" src="starting_location.png" onclick="check(23)"></div>
+      <div class="location"><img id="location24" src="starting_location.png" onclick="check(24)"></div>
     </div>
+    <script>
+      var ids = [];
+      var checkCount = 0;
+      var penalty = 0;
+      var lastCheck = 0;
+      var treasureLocation = 5;
+      var trapLocation = 18;
+      var gameOver = false;
 
+      for (var i = 0; i < 25; i++) {
+        ids.push("img" + i);
+      }
+
+      function check(position) {
+        if (gameOver) {
+          return;
+        }
+        var id = ids[position];
+        var img = document.getElementById(id);
+        if (position === treasureLocation) {
+          console.log("Found treasure at position:", position);
+          img.src = "treasure.jpg";
+          console.log("Setting img.src to 'treasure.jpg'");
+          gameOver = true;
+          penalty -= 3;
+        } else if (position === trapLocation) {
+          console.log("Found trap at position:", position);
+          img.src = "trap.jpg";
+          console.log("Setting img.src to 'trap.jpg'");
+          gameOver = true;
+          penalty += 4;
+        } else {
+          console.log("No treasure or trap at position:", position);
+          img.src = "pirate.jpg";
+          console.log("Setting img.src to 'pirate.jpg'");
+          checkCount++;
+          penalty++;
+        }
+        document.getElementById("locations").textContent = "Number of locations checked is " + checkCount;
+        document.getElementById("penalty").textContent = "Penalty is " + penalty;
+        lastCheck = position;
+      }
+      function help() {
+        if (gameOver) {
+          return;
+        }
+        var treasureRow = Math.floor(treasureLocation / 5);
+        var treasureCol = treasureLocation % 5;
+        var lastRow = Math.floor(lastCheck / 5);
+        var lastCol = lastCheck % 5;
+        var rowDiff = Math.abs(treasureRow - lastRow);
+        var colDiff = Math.abs(treasureCol - lastCol);
+        if ((rowDiff === 1 && colDiff === 0) || (rowDiff === 0 && colDiff === 1)) {
+          document.getElementById("helpRep").textContent = "Can smell it";
+        } else if ((rowDiff === 2 && colDiff === 0) || (rowDiff === 0 && colDiff === 2)) {
+          document.getElementById("helpRep").textContent = "Close Matie";
+          penalty += 2;
+        } else {
+          document.getElementById("helpRep").textContent = "Step faster";
+          penalty += 2;
+        }
+        document.getElementById("penalty").textContent = "Penalty is " + penalty;
+      }
+      document.getElementById("help").onclick = help;
+    </script>
 </body>
 
 </html>
